@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/counter.dart';
 
 class MyText extends StatelessWidget {
   const MyText({Key? key}) : super(key: key);
@@ -17,6 +20,6 @@ class OnlyText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text('Number of taps: 0');
+    return Text('Number of taps: ${context.watch<Counter>().count}');
   }
 }

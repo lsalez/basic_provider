@@ -1,4 +1,6 @@
+import 'package:basic_provider/providers/counter.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class FloatingActionButtons extends StatelessWidget {
   const FloatingActionButtons({Key? key}) : super(key: key);
@@ -10,14 +12,14 @@ class FloatingActionButtons extends StatelessWidget {
       children: [
         FloatingActionButton(
           child: const Icon(Icons.plus_one),
-          onPressed: () => {},
+          onPressed: () => context.read<Counter>().incrementOne(),
         ),
         const SizedBox(
           height: 20,
         ),
         FloatingActionButton(
           child: const Icon(Icons.exposure_minus_1),
-          onPressed: () => {},
+          onPressed: () => context.read<Counter>().decrementOne(),
         ),
       ],
     );
