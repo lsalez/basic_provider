@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/floatingActionButtons.dart';
-import '../widgets/myText.dart';
+import '../widgets/floating_action_buttons.dart';
+import '../widgets/my_text.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
